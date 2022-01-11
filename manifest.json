@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Depop photos downloader",
+    "description": "Saves the photos for a selected Depop listing",
+    "author": "Raleigh Littles",
+    "homepage_url": "https://github.com/raleighlittles/Chrome-Depop-Image-Downloader",
+    "version": "0.1",
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.depop.com/products/*"
+        ],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": { "48":  "icons/icon128.jpg",
+              "128":  "icons/icon512.jpg"},
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {},
+    "permissions": [
+      "storage",
+      "downloads",
+      "tabs"
+  ]
+}
